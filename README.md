@@ -149,13 +149,21 @@ $\frac{x}{A_{3}x^{2}+B_{3}x+C_{3}},\frac{1}{A_{3}x^{2}+B_{3}x+C_{3}}$.
 
 71. $+\infty$和$-\infty$可能对应两条水平渐近线或一条，奇点处常有一条垂直渐近线，有两条水平渐近线就不可能有斜渐近线
 
-72. $f(x,y)$在$(x_0,y_0)$可微$\Leftrightarrow\Delta z=z_x^\prime\Delta x+z_y^\prime \Delta y+O(P)\Leftarrow f^\prime_x, f^\prime_y连续$
+72. $f(x,y)​$在$(x_0,y_0)​$可微$\Leftrightarrow\Delta z=z_x^\prime\Delta x+z_y^\prime \Delta y+O(P)\Leftarrow f^\prime_x, f^\prime_y连续​$
 
 73. 读题要仔细，不要把$\mathrm{e}^{x^2}$看成$\mathrm{e}^{-x^2}$
 
 74. 分清收敛区间（开区间）和收敛域
 
-75. 单调有界$\Rightarrow$收敛
+75. 单调有界$\Rightarrow​$收敛
+
+76. $\frac{f(x)}{\vec{n}} = \nabla f(x)^T \vec{n}​$
+
+77. 鞍点$(x_0,y_0)$：$f(x,y_0)\leq f(x_0,y_0)\leq f(x_0,y)$
+
+78. $\sum_{i}^{}\sum_{j}A_{ij}X_{i}X_{j} = \sum_{i}^{}\sum_{j}X_{i}A_{ij}X_{j} = \sum_iX_i \sum_jA_{ij}X_j = \sum_iX_i[AX]_i = X^T[AX]$
+
+79. $\dfrac{\partial (x^Ty)}{\partial x} = y$ ,   $\dfrac{d(f(x,y))}{d x} = \dfrac{\partial (f(x,y))}{\partial x} + \dfrac{\partial y^T}{\partial x} \dfrac{\partial (f(x,y))}{\partial y}\Rightarrow$   $\dfrac{\partial (b^Tx)}{\partial x} = \dfrac{\partial (x^Tb)}{\partial x} = b$ ,   $\dfrac{\partial (x^TAx)}{\partial x} = \dfrac{\partial (x^Ty)}{\partial x} +  \dfrac{\partial y^T}{\partial x} \dfrac{\partial (x^Ty)}{\partial y}= y + \dfrac{\partial (x^TA^T)}{\partial x} \dfrac{\partial (x^Ty)}{\partial y} = y + A^Tx = (A+A^T)x$ ，一般地，求导法则为$ \frac{df(g,h)}{dx} =  \frac{d(g(x)^T)}{dx} \frac{\partial f(g,h)}{\partial g} + \frac{d(h(x)^T)}{dx} \frac{\partial f(g,h)}{\partial h} $
 
 # 线性代数
 
@@ -176,12 +184,13 @@ $\frac{x}{A_{3}x^{2}+B_{3}x+C_{3}},\frac{1}{A_{3}x^{2}+B_{3}x+C_{3}}$.
 15. 矩阵与对角阵相似时，对角阵中特征值顺序不影响。矩阵A特征值$\lambda_1\cdots\lambda_n$，则$A\sim\left[\begin{matrix}\lambda_1&\cdots&0\\0&\cdots&0\\\vdots&&\vdots\\0&\cdots&\lambda_n\end{matrix}\right]\Leftrightarrow$有n个线性无关特征向量$\Leftrightarrow\lambda_1=\cdots=\lambda_n(=\lambda)$时，$A-\lambda E$秩为n-r（r重根）
 16. 平面图形或线图形绕轴旋转应找到三维坐标与平面某长度关系
 17. 看到$a_{ij}$先想到转化成矩阵
+18. 体一定是环，环需要满足有乘法逆元（零除外）才能成体；域一定是体，体需要满足乘法交换律才能成域；域一定是环，二者的差别在于乘法群：一方面集合差一个元素0，另一方面一个是环的乘半群，一个是交换群
 
 # 概率论
 
 1. 随机事件常用技巧：加一个有的，$(A+B)+B=C+B$；乘一个有的，$(AB)B=CB$；拆成独立事件
 2. $C_0^0$不存在，当$P(B)=0$时，$P(A|B)$不存在
-3. 
+3. 贝叶斯公式：$P(H|X)=\frac{P(X|H)P(H)}{P(X)}$ ，其中$P(H|X)$ 是参数的后验概率(posterior)，$P(X|H)$ 是似然函数（likelihood/参数的合理性大小），$P(H)$ 是先验概率(prior)，$P(X)$ 是证据因子(evidence)，用于归一化
 4. 切比雪夫大数定律：$P\left\{偏差比\epsilon大\right\}\leq\frac{方差}{\epsilon^2}$；依概率收敛$n\rightarrow+\infty$时，偏差小于任意小常数；切比雪夫大数定律：$n\rightarrow+\infty$时，总偏差的平均值小于任意小常数；伯努利大数定律：为二项分布时大数定律的特例；辛钦大数定律：二项分布且$E(x_i)=\mu$时大数定律的特例；棣莫弗-拉普拉斯中心极限定律：二项分布当n很大时，$\frac{偏差}{标准差}$服从正态分布；列维-林德伯格中心极限定理：$\sqrt{n}\frac{总偏差的平均值}{标准差}$服从正态分布
 5. $D(X-Y)=D(X)+D(Y)-2\mathrm{Cov}(x,y)$
 6. $\sigma$和$\sigma^2$ 注意区分，指数分布$P(x)=\lambda\mathrm{e}^{-\lambda x},E(X)=\frac{1}{\lambda},D(X)=\frac{1}{\lambda^2}$泊松分布$P(X=k)=\frac{\lambda^k}{k!}\mathrm{e}^{-\lambda},E(X)=D(X)=\lambda$
@@ -193,3 +202,17 @@ $\frac{x}{A_{3}x^{2}+B_{3}x+C_{3}},\frac{1}{A_{3}x^{2}+B_{3}x+C_{3}}$.
 12. 计算正态分布概率大小要化成标准正态分布再比较
 13. 加和规则：$p(X)=\sum\limits_X p(X,Y)$ 乘积规则：$p(X,Y)=p(Y|X)p(X)$ 
 14. 一维正态分布：$f(x)=\frac{1}{\sqrt{2\pi}\sigma}\mathrm{e}^{-\frac{(x-\mu)^2}{2\sigma^2}}$，n维正态分布：$f_n(\vec{x})=\frac{1}{\sqrt{(2\pi)^n\det(\Sigma)}}\exp (-\frac{1}{2}(\vec{x}-\vec{\mu})^T\Sigma^{-1}(\vec{x}-\vec{\mu}))$ 。对二维正态分布，取$x_1=x_0,-\infty<x_2<+\infty$的 一个平面去截此二维分布曲线，得到的函数曲线设为$g(x_2)$，在全空间积分结果不为1，而是$x_1$的边缘概率分布$f_n(x_1)$在$x_1=x_0$点的值
+15. 对于一个有K个结点的图，联合概率为$p(\textbf{x})=\prod\limits_{k=1}^Kp(x_k|pa_k)$ ，其中$pa_k$ 表示$x_k$ 的父结点的集合，$\textbf{x}$ 是所有结点的集合
+16. 似然函数$L(\theta|\textbf{x})$ 与概率密度函数$f(\textbf{x}|\theta)$ 的唯一区别是似然函数中$\textbf{x}$ 是已知的给定样本点，$\theta$ 是变量
+17. 准确率Precision是分为正例的样本中正确比例:$P=\frac{tp}{tp+fp}$ ，召回率Recall是实际为正例的样本中正确比例:$R=\frac{tp}{tp+fn}$ ，F-measure:$\frac{2PR}{P+R}$ ，精确度Accuracy是正确分类的样本占总体的比例:$A=\frac{tp+tn}{tp+fp+tn+fn}$ 
+18. 衡量聚类结果好坏的指标   纯度Purity:$Purity=\frac1N\sum\limits_{i=1}^k\max_j|c_i\cap t_j|$ ，其中k是聚类个数，$c_i$ 是一个聚类，$t_j$ 是实际类          兰德指数Rand:$Rand=\frac{a+c}{n(n-1)/2}$ ，其中a是两点聚在同一类且正确的点对个数，c是两点聚在不同类且正确的点对个数，n是测试集的大小
+19. $\prod\limits_{i\in I}(1+x_i)=\sum\limits_{J\subseteq I}\prod\limits_{j\in J}x_j$ 
+20. 离/偏差：deviation 方差：variance 标准差：standard deviation 平均差：mean deviation
+
+# 最优化方法
+
+1. 当$f(x)$满足$f(x_2)-f(x_1)\geq \nabla f(x_1)(x_2-x_1)$ 时，或$\nabla^2 f(x)$ 是半正定阵/正定（特征值$\geq / >$ 0）时，$f(x)$是凸函数/严格凸函数
+2. 如果$\frac{\partial f}{\partial x} (x_0,y_0) = \frac{\partial f}{\partial y} (x_0,y_0)=0, \Delta=\{\frac{\partial^2f}{\partial x^2} \frac{\partial^2f}{\partial y^2} - (\frac{\partial^2f}{\partial x\partial y})^2\}_{(x_0,y_0)}$ ，1.若$\Delta>0$且$\frac{\partial^2 f}{\partial x^2} (x_0,y_0) <0 /  \frac{\partial^2 f}{\partial y^2} (x_0,y_0)<0$ ，则$(x_0,y_0)$是局部最大值点   2.若$\Delta>0$且$\frac{\partial^2 f}{\partial x^2} (x_0,y_0) >0 /  \frac{\partial^2 f}{\partial y^2} (x_0,y_0)>0$ ，则$(x_0,y_0)$是局部最小值点   3.若$\Delta<0$则$(x_0,y_0)$为鞍点
+
+
+
