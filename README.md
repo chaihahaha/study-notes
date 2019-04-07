@@ -213,6 +213,8 @@ $\frac{x}{A_{3}x^{2}+B_{3}x+C_{3}},\frac{1}{A_{3}x^{2}+B_{3}x+C_{3}}$.
 
 1. 当$f(x)$满足$f(x_2)-f(x_1)\geq \nabla f(x_1)(x_2-x_1)$ 时，或$\nabla^2 f(x)$ 是半正定阵/正定（特征值$\geq / >$ 0）时，$f(x)$是凸函数/严格凸函数
 2. 如果$\frac{\partial f}{\partial x} (x_0,y_0) = \frac{\partial f}{\partial y} (x_0,y_0)=0, \Delta=\{\frac{\partial^2f}{\partial x^2} \frac{\partial^2f}{\partial y^2} - (\frac{\partial^2f}{\partial x\partial y})^2\}_{(x_0,y_0)}$ ，1.若$\Delta>0$且$\frac{\partial^2 f}{\partial x^2} (x_0,y_0) <0 /  \frac{\partial^2 f}{\partial y^2} (x_0,y_0)<0$ ，则$(x_0,y_0)$是局部最大值点   2.若$\Delta>0$且$\frac{\partial^2 f}{\partial x^2} (x_0,y_0) >0 /  \frac{\partial^2 f}{\partial y^2} (x_0,y_0)>0$ ，则$(x_0,y_0)$是局部最小值点   3.若$\Delta<0$则$(x_0,y_0)$为鞍点
+3. 局部极小点处满足下降方向集与可行方向集的交是空集，下降方向与可行方向不在过原点的任何超平面的同一侧，由Gordan引理可得目标函数$f(x)$梯度与约束函数$c_i(x)$梯度关于非负系数线性相关，等式约束组合系数任意，不等式约束组合系数非负，而当$i\in I^*$时，$c_i(x^*)=0$，$i\in I\backslash I^*$时，$\lambda_i^*=0$，即互补松驰条件$\lambda_i^*c_i(x^*)=0$。若将目标函数梯度的系数取定为1，上述条件即KKT条件。
+4. 二阶最优性条件即凹凸要求，即拉格朗日函数的二阶梯度在驻点处约束超曲面的切平面所形成的子空间上正定。
 
 
 
