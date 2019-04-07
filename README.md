@@ -163,7 +163,7 @@ $\frac{x}{A_{3}x^{2}+B_{3}x+C_{3}},\frac{1}{A_{3}x^{2}+B_{3}x+C_{3}}$.
 
 78. $\sum_{i}^{}\sum_{j}A_{ij}X_{i}X_{j} = \sum_{i}^{}\sum_{j}X_{i}A_{ij}X_{j} = \sum_iX_i \sum_jA_{ij}X_j = \sum_iX_i[AX]_i = X^T[AX]$
 
-79. $\dfrac{\partial (x^Ty)}{\partial x} = y$ ,   $\dfrac{d(f(x,y))}{d x} = \dfrac{\partial (f(x,y))}{\partial x} + \dfrac{\partial y^T}{\partial x} \dfrac{\partial (f(x,y))}{\partial y}\Rightarrow$   $\dfrac{\partial (b^Tx)}{\partial x} = \dfrac{\partial (x^Tb)}{\partial x} = b$ ,   $\dfrac{\partial (x^TAx)}{\partial x} = \dfrac{\partial (x^Ty)}{\partial x} +  \dfrac{\partial y^T}{\partial x} \dfrac{\partial (x^Ty)}{\partial y}= y + \dfrac{\partial (x^TA^T)}{\partial x} \dfrac{\partial (x^Ty)}{\partial y} = y + A^Tx = (A+A^T)x$ ，一般地，求导法则为$ \frac{df(g,h)}{dx} =  \frac{d(g(x)^T)}{dx} \frac{\partial f(g,h)}{\partial g} + \frac{d(h(x)^T)}{dx} \frac{\partial f(g,h)}{\partial h} $
+79.  矩阵微积分方法：先正常求导，注意非交换性，再对结果取转置 $\dfrac{\partial (b^Tx)}{\partial x} =  (\dfrac{b^T dx}{dx})^T = b$ ,   $\dfrac{\partial (x^TAx)}{\partial x} =(\dfrac{d(x^T)Ax+x^TAdx}{dx})^T=(\dfrac{x^TA^Tdx+x^TAdx}{dx})^T= (A+A^T)x$ 
 
 # 线性代数
 
