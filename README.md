@@ -186,12 +186,12 @@ $\frac{x}{A_{3}x^{2}+B_{3}x+C_{3}},\frac{1}{A_{3}x^{2}+B_{3}x+C_{3}}$.
 17. 看到$a_{ij}$先想到转化成矩阵
 18. 体一定是环，环需要满足有乘法逆元（零除外）才能成体；域一定是体，体需要满足乘法交换律才能成域；域一定是环，二者的差别在于乘法群：一方面集合差一个元素0，另一方面一个是环的乘半群，一个是交换群
 
-# 概率论
+# 概率论与数理统计
 
 1. 随机事件常用技巧：加一个有的，$(A+B)+B=C+B$；乘一个有的，$(AB)B=CB$；拆成独立事件
 2. $C_0^0$不存在，当$P(B)=0$时，$P(A|B)$不存在
 3. 贝叶斯公式：$P(H|X)=\frac{P(X|H)P(H)}{P(X)}$ ，其中$P(H|X)$ 是参数的后验概率(posterior)，$P(X|H)$ 是似然函数（likelihood/参数的合理性大小），$P(H)$ 是先验概率(prior)，$P(X)$ 是证据因子(evidence)，用于归一化
-4. 切比雪夫大数定律：$P\left\{偏差比\epsilon大\right\}\leq\frac{方差}{\epsilon^2}$；依概率收敛$n\rightarrow+\infty$时，偏差小于任意小常数；切比雪夫大数定律：$n\rightarrow+\infty$时，总偏差的平均值小于任意小常数；伯努利大数定律：为二项分布时大数定律的特例；辛钦大数定律：二项分布且$E(x_i)=\mu$时大数定律的特例；棣莫弗-拉普拉斯中心极限定律：二项分布当n很大时，$\frac{偏差}{标准差}$服从正态分布；列维-林德伯格中心极限定理：$\sqrt{n}\frac{总偏差的平均值}{标准差}$服从正态分布
+4. 切比雪夫大数定律：$P\left\{偏差比\epsilon大\right\}\leq\frac{方差}{\epsilon^2}​$；依概率收敛$n\rightarrow+\infty​$时，偏差小于任意小常数；切比雪夫大数定律：$n\rightarrow+\infty​$时，总偏差的平均值小于任意小常数；伯努利大数定律：为二项分布时大数定律的特例；辛钦大数定律：二项分布且$E(x_i)=\mu​$时大数定律的特例；棣莫弗-拉普拉斯中心极限定律：二项分布当n很大时，$\frac{偏差}{标准差}​$服从正态分布；列维-林德伯格中心极限定理：$\sqrt{n}\frac{总偏差的平均值}{标准差}​$服从正态分布
 5. $D(X-Y)=D(X)+D(Y)-2\mathrm{Cov}(x,y)$
 6. $\sigma$和$\sigma^2$ 注意区分，指数分布$P(x)=\lambda\mathrm{e}^{-\lambda x},E(X)=\frac{1}{\lambda},D(X)=\frac{1}{\lambda^2}$泊松分布$P(X=k)=\frac{\lambda^k}{k!}\mathrm{e}^{-\lambda},E(X)=D(X)=\lambda$
 7. $X+Y\sim N(2\mu,2\sigma^2),X-Y\sim N(0,2\sigma^2)$，X，Y满足独立，正态分布
@@ -208,6 +208,7 @@ $\frac{x}{A_{3}x^{2}+B_{3}x+C_{3}},\frac{1}{A_{3}x^{2}+B_{3}x+C_{3}}$.
 18. 衡量聚类结果好坏的指标   纯度Purity:$Purity=\frac1N\sum\limits_{i=1}^k\max_j|c_i\cap t_j|$ ，其中k是聚类个数，$c_i$ 是一个聚类，$t_j$ 是实际类          兰德指数Rand:$Rand=\frac{a+c}{n(n-1)/2}$ ，其中a是两点聚在同一类且正确的点对个数，c是两点聚在不同类且正确的点对个数，n是测试集的大小
 19. $\prod\limits_{i\in I}(1+x_i)=\sum\limits_{J\subseteq I}\prod\limits_{j\in J}x_j$ 
 20. 离/偏差：deviation 方差：variance 标准差：standard deviation 平均差：mean deviation
+21. 皮尔逊相关系数$\rho_{x,y}$ $= \frac{x和y的协方差}{(x的标准差 * y的标准差)} = \frac{\sum\limits_{i=1}^n(x_i-\bar{x})(y_i-\bar{y})}{\sqrt{\sum\limits_{i=1}^n(x_i-\bar{x})^2}\sqrt{\sum\limits_{i=1}^n(y_i-\bar{y})^2}}​$   
 
 # 最优化方法
 
@@ -216,5 +217,8 @@ $\frac{x}{A_{3}x^{2}+B_{3}x+C_{3}},\frac{1}{A_{3}x^{2}+B_{3}x+C_{3}}$.
 3. 局部极小点处满足下降方向集与可行方向集的交是空集，下降方向与可行方向不在过原点的任何超平面的同一侧，由Gordan引理可得目标函数$f(x)$梯度与约束函数$c_i(x)$梯度关于非负系数线性相关，等式约束组合系数任意，不等式约束组合系数非负，而当$i\in I^*$时，$c_i(x^*)=0$，$i\in I\backslash I^*$时，$\lambda_i^*=0$，即互补松驰条件$\lambda_i^*c_i(x^*)=0$。若将目标函数梯度的系数取定为1，上述条件即KKT条件。
 4. 二阶最优性条件即凹凸要求，即拉格朗日函数的二阶梯度在驻点处约束超曲面的切平面所形成的子空间上正定。
 
+# 机器学习
 
+1. 验证/开发集用于调整超参数，测试集用于检查模型泛化能力
+2. 高偏差/偏置(bias)指过多的泛化，过多的假设；高方差(variance)指过多的拟合，过多的参数（过少的假设）
 
