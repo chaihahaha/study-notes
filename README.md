@@ -149,15 +149,15 @@ $\frac{x}{A_{3}x^{2}+B_{3}x+C_{3}},\frac{1}{A_{3}x^{2}+B_{3}x+C_{3}}$.
 
 71. $+\infty$和$-\infty$可能对应两条水平渐近线或一条，奇点处常有一条垂直渐近线，有两条水平渐近线就不可能有斜渐近线
 
-72. $f(x,y)​$在$(x_0,y_0)​$可微$\Leftrightarrow\Delta z=z_x^\prime\Delta x+z_y^\prime \Delta y+O(P)\Leftarrow f^\prime_x, f^\prime_y连续​$
+72. $f(x,y)$在$(x_0,y_0)$可微$\Leftrightarrow\Delta z=z_x^\prime\Delta x+z_y^\prime \Delta y+O(P)\Leftarrow f^\prime_x, f^\prime_y连续$
 
 73. 读题要仔细，不要把$\mathrm{e}^{x^2}$看成$\mathrm{e}^{-x^2}$
 
 74. 分清收敛区间（开区间）和收敛域
 
-75. 单调有界$\Rightarrow​$收敛
+75. 单调有界$\Rightarrow$收敛
 
-76. $\frac{f(x)}{\vec{n}} = \nabla f(x)^T \vec{n}​$
+76. $\frac{f(x)}{\vec{n}} = \nabla f(x)^T \vec{n}$
 
 77. 鞍点$(x_0,y_0)$：$f(x,y_0)\leq f(x_0,y_0)\leq f(x_0,y)$
 
@@ -184,14 +184,16 @@ $\frac{x}{A_{3}x^{2}+B_{3}x+C_{3}},\frac{1}{A_{3}x^{2}+B_{3}x+C_{3}}$.
 15. 矩阵与对角阵相似时，对角阵中特征值顺序不影响。矩阵A特征值$\lambda_1\cdots\lambda_n$，则$A\sim\left[\begin{matrix}\lambda_1&\cdots&0\\0&\cdots&0\\\vdots&&\vdots\\0&\cdots&\lambda_n\end{matrix}\right]\Leftrightarrow$有n个线性无关特征向量$\Leftrightarrow\lambda_1=\cdots=\lambda_n(=\lambda)$时，$A-\lambda E$秩为n-r（r重根）
 16. 平面图形或线图形绕轴旋转应找到三维坐标与平面某长度关系
 17. 看到$a_{ij}$先想到转化成矩阵
-18. 体一定是环，环需要满足有乘法逆元（零除外）才能成体；域一定是体，体需要满足乘法交换律才能成域；域一定是环，二者的差别在于乘法群：一方面集合差一个元素0，另一方面一个是环的乘半群，一个是交换群
+18. 环——(+乘法逆元)——>体——(+乘法交换律)——>域。域一定是环，二者的差别在于乘法群：一方面集合差一个元素0，另一方面一个是环的乘半群，一个是交换群
+19. ${\displaystyle \delta _{\nu _{1}\dots \nu _{p}}^{\mu _{1}\dots \mu _{p}}={\begin{cases}+1&\quad {\text{if }}\nu _{1}\dots \nu _{p}{\text{ are distinct integers and are an even permutation of }}\mu _{1}\dots \mu _{p}\\-1&\quad {\text{if }}\nu _{1}\dots \nu _{p}{\text{ are distinct integers and are an odd permutation of }}\mu _{1}\dots \mu _{p}\\\;\;0&\quad {\text{in all other cases}}.\end{cases}}}$
+20. $\frac{\partial x^TAx}{x}\\=\frac{\partial x_i A_j^i x^j}{\partial x^k}\\=\frac{\partial x_i}{\partial x^k}A_j^i x^j+x_i A_j^i \frac{\partial x^j}{\partial x^k}\\=\delta_i^k A_j^i x^j+ x_i A_j^i \delta^{jk}\\=A_j^k x^j+x_i A_j^i \delta^{jk} \delta_{kk} \delta^{kk}\\=A_j^k x^j+x_i A_j^i \delta^{j}_k \delta^{kk}\\=A_j^k x^j+x_i A_k^i  \delta^{kk}\\=A_j^k x^j+\delta_{ii}x^i A_k^i  \delta^{kk}\\=Ax+A^Tx$
 
 # 概率论与数理统计
 
 1. 随机事件常用技巧：加一个有的，$(A+B)+B=C+B$；乘一个有的，$(AB)B=CB$；拆成独立事件
 2. $C_0^0$不存在，当$P(B)=0$时，$P(A|B)$不存在
 3. 贝叶斯公式：$P(H|X)=\frac{P(X|H)P(H)}{P(X)}$ ，其中$P(H|X)$ 是参数的后验概率(posterior)，$P(X|H)$ 是似然函数（likelihood/参数的合理性大小），$P(H)$ 是先验概率(prior)，$P(X)$ 是证据因子(evidence)，用于归一化
-4. 切比雪夫大数定律：$P\left\{偏差比\epsilon大\right\}\leq\frac{方差}{\epsilon^2}​$；依概率收敛$n\rightarrow+\infty​$时，偏差小于任意小常数；切比雪夫大数定律：$n\rightarrow+\infty​$时，总偏差的平均值小于任意小常数；伯努利大数定律：为二项分布时大数定律的特例；辛钦大数定律：二项分布且$E(x_i)=\mu​$时大数定律的特例；棣莫弗-拉普拉斯中心极限定律：二项分布当n很大时，$\frac{偏差}{标准差}​$服从正态分布；列维-林德伯格中心极限定理：$\sqrt{n}\frac{总偏差的平均值}{标准差}​$服从正态分布
+4. 切比雪夫大数定律：$P\left\{偏差比\epsilon大\right\}\leq\frac{方差}{\epsilon^2}$；依概率收敛$n\rightarrow+\infty$时，偏差小于任意小常数；切比雪夫大数定律：$n\rightarrow+\infty$时，总偏差的平均值小于任意小常数；伯努利大数定律：为二项分布时大数定律的特例；辛钦大数定律：二项分布且$E(x_i)=\mu$时大数定律的特例；棣莫弗-拉普拉斯中心极限定律：二项分布当n很大时，$\frac{偏差}{标准差}$服从正态分布；列维-林德伯格中心极限定理：$\sqrt{n}\frac{总偏差的平均值}{标准差}$服从正态分布
 5. $D(X-Y)=D(X)+D(Y)-2\mathrm{Cov}(x,y)$
 6. $\sigma$和$\sigma^2$ 注意区分，指数分布$P(x)=\lambda\mathrm{e}^{-\lambda x},E(X)=\frac{1}{\lambda},D(X)=\frac{1}{\lambda^2}$泊松分布$P(X=k)=\frac{\lambda^k}{k!}\mathrm{e}^{-\lambda},E(X)=D(X)=\lambda$
 7. $X+Y\sim N(2\mu,2\sigma^2),X-Y\sim N(0,2\sigma^2)$，X，Y满足独立，正态分布
@@ -208,7 +210,7 @@ $\frac{x}{A_{3}x^{2}+B_{3}x+C_{3}},\frac{1}{A_{3}x^{2}+B_{3}x+C_{3}}$.
 18. 衡量聚类结果好坏的指标   纯度Purity:$Purity=\frac1N\sum\limits_{i=1}^k\max_j|c_i\cap t_j|$ ，其中k是聚类个数，$c_i$ 是一个聚类，$t_j$ 是实际类          兰德指数Rand:$Rand=\frac{a+c}{n(n-1)/2}$ ，其中a是两点聚在同一类且正确的点对个数，c是两点聚在不同类且正确的点对个数，n是测试集的大小
 19. $\prod\limits_{i\in I}(1+x_i)=\sum\limits_{J\subseteq I}\prod\limits_{j\in J}x_j$ 
 20. 离/偏差：deviation 方差：variance 标准差：standard deviation 平均差：mean deviation
-21. 皮尔逊相关系数$\rho_{x,y}$ $= \frac{x和y的协方差}{(x的标准差 * y的标准差)} = \frac{\sum\limits_{i=1}^n(x_i-\bar{x})(y_i-\bar{y})}{\sqrt{\sum\limits_{i=1}^n(x_i-\bar{x})^2}\sqrt{\sum\limits_{i=1}^n(y_i-\bar{y})^2}}​$   
+21. 皮尔逊相关系数$\rho_{x,y}$ $= \frac{x和y的协方差}{(x的标准差 * y的标准差)} = \frac{\sum\limits_{i=1}^n(x_i-\bar{x})(y_i-\bar{y})}{\sqrt{\sum\limits_{i=1}^n(x_i-\bar{x})^2}\sqrt{\sum\limits_{i=1}^n(y_i-\bar{y})^2}}$   
 
 # 最优化方法
 
@@ -221,4 +223,5 @@ $\frac{x}{A_{3}x^{2}+B_{3}x+C_{3}},\frac{1}{A_{3}x^{2}+B_{3}x+C_{3}}$.
 
 1. 验证/开发集用于调整超参数，测试集用于检查模型泛化能力
 2. 高偏差/偏置(bias)指过多的泛化，过多的假设；高方差(variance)指过多的拟合，过多的参数（过少的假设）
+3. RNN的展开图可以从左下往右上看就是从输入到输出
 
